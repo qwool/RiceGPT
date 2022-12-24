@@ -1,0 +1,25 @@
+configuration {
+font: "Monospace 14";
+columns: 1;
+lines: 10;
+width: 50;
+height: 50;
+horizontal-margin: 10;
+vertical-margin: 10;
+bg-color: "#282a36";
+fg-color: "#f8f8f2";
+location: 1;
+fullscreen: false;
+fixed-num-lines: true;
+alt-gr: false;
+key-activate: "Return";
+key-cancel: "Escape";
+key-next-line: "Tab";
+key-prev-line: "Shift+Tab";
+key-mode-next: "Right";
+key-mode-prev: "Left";
+key-history: "Up";
+key-history: "Down";
+window-format: "<b>{}</b>";
+}
+@theme "gruvbox-dark"

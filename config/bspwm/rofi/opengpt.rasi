@@ -1,0 +1,12 @@
+configuration{
+	font: "DejaVu Sans Mono 12";
+	modi: "window,run";
+	location: 1;
+	width: 50;
+	height: 25;
+	lines: 10;
+	columns: 2;
+	terminal: "kitty";
+	ssh-command: "ssh -t";
+}
+@theme "gruvbox-dark"

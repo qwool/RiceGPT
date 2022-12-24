@@ -1,0 +1,36 @@
+configuration {
+// Set the font
+font: "DejaVu Sans Mono 10";
+
+// Set the theme
+
+// Set the width and height of the window
+width: "30";
+height: "10";
+
+// Set the number of rows and columns
+columns: "1";
+lines: "10";
+
+// Set the behavior when running multiple instances
+multi-instance: "false";
+
+// Set the modi (modes) to use
+modi: "window";
+
+// Set the keybindings
+keybindings:
+  // Close rofi
+  "Escape": "abort";
+  // Reload the configuration
+
+// Set the appearance of the window
+window-format: "<b>{}</b>";
+
+// Set the power menu options
+window-options: "Lock, Suspend, Reboot, Shut Down";
+
+// Set the command to run when an option is selected
+window-command: "systemctl {option}";
+}
+@theme "Arc-Dark"
