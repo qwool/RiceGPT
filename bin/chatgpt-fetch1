@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Set colors
+red=$(tput setaf 1)
+green=$(tput setaf 2)
+yellow=$(tput setaf 3)
+blue=$(tput setaf 4)
+magenta=$(tput setaf 5)
+cyan=$(tput setaf 6)
+white=$(tput setaf 7)
+
+# Set variables
+hostname=$(hostname)
+kernel=$(uname -r)
+uptime=$(uptime -p)
+packages=$(pacman -Q | wc -l)
+shell=$(basename $SHELL)
+resolution=$(xdpyinfo | grep dimensions | awk '{print $2}')
+
+# Print ASCII art logo
+# cat << "EOF"
+    # _/      _/                            _/    _/    _/
+   # _/      _/  _/  _/      _/_/_/      _/  _/  _/  _/  _/_/
+  # _/      _/  _/  _/      _/    _/  _/_/      _/  _/  _/
+ # _/      _/  _/  _/      _/    _/  _/  _/    _/    _/
+# _/_/_/_/    _/  _/_/_/  _/    _/  _/    _/  _/      _/_/
+
+echo "Hostname: $hostname"
+echo "Kernel: $kernel"
+echo "Uptime: $uptime"
+echo "Packages: $packages (pacman)"
+echo "Shell: $shell"
+echo "Resolution: $resolution"

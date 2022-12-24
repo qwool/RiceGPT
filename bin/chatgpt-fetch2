@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Set variables
+hostname=$(hostname)
+kernel=$(uname -r)
+uptime=$(uptime -p)
+packages=$(pacman -Q | wc -l)
+shell=$(basename $SHELL)
+resolution=$(xdpyinfo | grep dimensions | awk '{print $2}')
+
+# Set colors
+red=$(tput setaf 1)
+green=$(tput setaf 2)
+yellow=$(tput setaf 3)
+blue=$(tput setaf 4)
+reset=$(tput sgr0)
+
+echo "
+    _/      _/                            _/    _/    _/
+   _/      _/  _/  _/      _/_/_/      _/  _/  _/  _/  _/_/
+  _/      _/  _/  _/      _/    _/  _/_/      _/  _/  _/
+ _/      _/  _/  _/      _/    _/  _/  _/    _/    _/
+_/_/_/_/    _/  _/_/_/  _/    _/  _/    _/  _/      _/_/
+
+"
+# Print system info
+echo "${green}Hostname:${reset} $hostname"
+echo "${green}Kernel:${reset} $kernel"
+echo "${green}Uptime:${reset} $uptime"
+echo "${green}Packages:${reset} $packages (pacman)"
+echo "${green}Shell:${reset} $shell"
+echo "${green}Resolution:${reset} $resolution"
+
