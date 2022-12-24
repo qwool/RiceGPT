@@ -1,3 +1,8 @@
+/*
+A simple C++ fetch, written by ChatGPT
+Only human involvement is pasting
+*/
+
 #include <iostream>
 #include <string>
 #include <unistd.h>

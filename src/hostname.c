@@ -1,3 +1,7 @@
+/*
+A program for reading /etc/hostname and printing it out, made because of the lack of a hostname tool on my system. Written entirely by ChatGPT
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
